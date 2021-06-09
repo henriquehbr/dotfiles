@@ -1,0 +1,11 @@
+# Set keyboard map
+setxkbmap br abnt2 &
+
+# Set default cursor to pointer
+xsetroot -cursor_name left_ptr &
+
+# Set typematic delay (interval when holding keys) to 200ms, with a rate of 30Hz
+xset r rate 200 30
+
+# Runs bspwm
+exec bspwm
