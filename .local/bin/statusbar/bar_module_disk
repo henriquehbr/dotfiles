@@ -1,0 +1,8 @@
+#!/bin/bash
+
+interval=30s
+
+run() {
+	disk=$(df -h | awk '/\/dev\/mapper/ { print $3 "/" $2 }')
+	echo " $disk"
+}

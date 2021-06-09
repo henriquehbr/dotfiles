@@ -1,0 +1,19 @@
+#!/bin/bash
+
+for module in $HOME/.local/bin/statusbar/bar_module_*; do
+	[ -e "$module" ] || continue
+
+	source "$module"
+
+	module_name=$(basename $module)
+	unprefixed_module_name="${module_name#"bar_module_"}"
+
+	if [[ ! "$interval" =~ ^[0-9]+[smhd]$ ]]; then
+		run | sed -ue s/^/$unprefixed_module_name\ / > /tmp/bar-fifo &
+	else
+		while :; do
+			run | sed -ue s/^/$unprefixed_module_name\ / > /tmp/bar-fifo
+			sleep "$interval"
+		done &
+	fi
+done

@@ -1,0 +1,4 @@
+#!/bin/bash
+
+brightness=$(awk '{printf("%d", $1+100)}' /sys/class/backlight/intel_backlight/brightness)
+echo $brightness > /sys/class/backlight/intel_backlight/brightness

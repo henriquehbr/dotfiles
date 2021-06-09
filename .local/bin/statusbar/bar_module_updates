@@ -1,0 +1,8 @@
+#!/bin/bash
+
+interval=1m
+
+run() {
+	updates=$(pacman -Qu | wc -l)
+	echo " $updates"
+}

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+interval=10s
+
+run() {
+	connected_network="$(nmcli -t -f ACTIVE,SSID,SIGNAL dev wifi list | grep yes)"
+	if [[ $? == 0 ]]; then
+		echo " $(echo "$connected_network" | cut -d : -f 2)"
+	else
+		echo " Not connected"
+	fi
+}

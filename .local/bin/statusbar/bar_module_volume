@@ -1,0 +1,6 @@
+#!/bin/bash
+
+run() {
+	volume=$(awk -F "[][]" '/Mono:/ { print $2 }' <(amixer -c 0 -M get Master))
+	echo " $volume"
+}

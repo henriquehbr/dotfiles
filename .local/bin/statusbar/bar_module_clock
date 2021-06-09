@@ -1,0 +1,8 @@
+#!/bin/bash
+
+interval=1m
+
+run() {
+	date=$(date '+%H:%M')
+	echo " $date"
+}

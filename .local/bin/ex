@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Archive extraction
+# usage: ex <file>
+
+if [ -f $1 ]; then
+	filename=$(basename $1 | cut -d "." -f 1)
+	args="xvf $1 -C $filename"
+	mkdir -p $filename 
+	case $1 in
+		*.tar.bz2)	tar j $args ;;
+		*.tar.gz)	tar z $args ;;
+		*.tar.xz)	tar $args ;;
+		*.zip)		unzip $1 ;;
+		*)			echo "'$1' cannot be extracted via 'ex'"
+	esac
+else
+	echo "'$1' is not a valid file"
+fi
