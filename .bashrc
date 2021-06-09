@@ -1,10 +1,9 @@
-#
-# ~/.bashrc
-#
-
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias dots='/usr/bin/git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME'
+# Import aliases
+source "$HOME/.bash_aliases"
+source "$HOME/.bash_vars"
 
+# Terminal prompt
 PS1='[\u@\h \W]\$ '
