@@ -1,5 +1,6 @@
 #!/bin/bash
 
+alias doas="doas --"
 alias dots='git --git-dir=$HOME/repos/dotfiles --work-tree=$HOME'
 alias vim='nvim'
 alias profile='. ~/.bash_profile && echo "\".bash_profile\" reloaded"'
