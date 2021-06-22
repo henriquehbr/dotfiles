@@ -1,0 +1,27 @@
+#!/bin/bash
+
+check_updates_db="/tmp/updates-db-${UID}/"
+
+# Delete database lockfile on exit
+trap 'rm -f $check_updates_db/db.lck' INT TERM EXIT
+
+db_path="$(pacman-conf DBPath)"
+
+mkdir -p "$check_updates_db"
+
+ln -s "${db_path}/local" "$check_updates_db" &> /dev/null
+
+# Update package databases
+if ! fakeroot -- pacman -Sy --dbpath "$check_updates_db" --logfile /dev/null &> /dev/null; then
+	die 'Cannot fetch updates'
+fi
+
+# Create array of available package updates
+mapfile -t updates < <(pacman -Qu --dbpath "$check_updates_db" 2> /dev/null | grep -v '\[.*\]')
+
+# Display updates
+if (( ${#updates[@]} )); then
+	printf '%s\n' "${updates[@]}"
+else
+	exit 2
+fi
