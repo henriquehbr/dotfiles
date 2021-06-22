@@ -10,12 +10,12 @@ alias ..='cd ..'
 alias ...='cd ../..'
 
 # Pacman
-alias pac-update='sudo pacman -Syyu'
+alias pac-update='doas -- pacman -Syyu'
 alias yay-update="yay -Sua --noconfirm"
 alias update="yay -Syu --noconfirm"
-alias pac-unlock="sudo rm /var/lib/pacman/db.lck"
-alias pac-clean='sudo pacman -Rns $(pacman -Qqdt) 2> /dev/null || echo "No packages to remove"'
-alias pac-mirrors="sudo reflector --sort age -c Brazil --save /etc/pacman.d/mirrorlist"
+alias pac-unlock="doas rm /var/lib/pacman/db.lck"
+alias pac-clean='doas -- pacman -Rns $(pacman -Qqdt) 2> /dev/null || echo "No packages to remove"'
+alias pac-mirrors="doas -- reflector --sort age -c Brazil --save /etc/pacman.d/mirrorlist"
 
 # Git
 alias unstageall="git reset"
