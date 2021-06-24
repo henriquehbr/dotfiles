@@ -14,32 +14,32 @@
 " | l[nore]map | -       | yes     | yes      | -       | -       | -                 | -             | yes       |
 " +────────────+─────────+─────────+──────────+─────────+─────────+───────────────────+───────────────+───────────+
 
-" Save with: s
+" save -> s
 nnoremap s :w<CR>
 
-" Exit with: q
+" exit -> q
 nnoremap q :q<CR>
 
-" Force exit with: Q
+" force exit -> Q
 nnoremap Q :q!<CR>
 
-" Save-Exit with: x
+" save-exit -> x
 nnoremap x :x<CR>
 
-" Open new tab with: n
+" new tab -> n
 nnoremap t :tabnew<CR>
 
-" Open file in current tab
+" open file in current tab -> o
 nnoremap o :Explore<CR>
 
-" Open file in new tab with: O
+" open file in new tab -> O
 nnoremap O :Tex<CR>
 
-" Go to next tab with: tab
+" next tab -> tab
 nnoremap <Tab> :tabn<CR>
 
-" Go to previous tab with: shift + tab
+" previous tab -> shift + tab
 nnoremap <S-Tab> :tabp<CR>
 
-" Redo -> U
+" redo -> U
 nnoremap U <C-R>
