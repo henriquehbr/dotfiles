@@ -27,7 +27,7 @@ nnoremap Q :q!<CR>
 nnoremap x :x<CR>
 
 " Open new tab with: n
-nnoremap n :tabnew<CR>
+nnoremap t :tabnew<CR>
 
 " Open file in current tab
 nnoremap o :Explore<CR>
