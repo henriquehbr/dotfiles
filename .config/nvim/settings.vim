@@ -1,5 +1,5 @@
 " Enable line numbers
-set number
+set number relativenumber
 
 " Enables syntax highlight
 syntax on
