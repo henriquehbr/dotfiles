@@ -21,7 +21,7 @@ alias pac-mirrors="doas reflector --sort age -c Brazil --save /etc/pacman.d/mirr
 alias unstageall="git reset"
 
 # Changing "ls" to "exa"
-alias ls='exa -alh --git --color=always --group-directories-first'
+alias ls='exa -alh --color=always --group-directories-first'
 alias tree='exa -aT --color=always --group-directories-first'
 
 # Colored outputs
