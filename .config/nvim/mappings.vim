@@ -40,3 +40,6 @@ nnoremap <Tab> :tabn<CR>
 
 " Go to previous tab with: shift + tab
 nnoremap <S-Tab> :tabp<CR>
+
+" Redo -> U
+nnoremap U <C-R>
