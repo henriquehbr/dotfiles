@@ -1,3 +1,6 @@
+" Hide empty line tilde character by setting their color to same as background
+:highlight EndOfBuffer ctermfg=black
+
 " Enable line numbers
 set number relativenumber
 
