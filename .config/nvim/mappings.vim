@@ -29,8 +29,11 @@ nnoremap x :x<CR>
 " Open new tab with: n
 nnoremap n :tabnew<CR>
 
-" Open a new file with: o
-nnoremap o :Tex<CR>
+" Open file in current tab
+nnoremap o :Explore<CR>
+
+" Open file in new tab with: O
+nnoremap O :Tex<CR>
 
 " Go to next tab with: tab
 nnoremap <Tab> :tabn<CR>
