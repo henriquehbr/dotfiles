@@ -1,3 +1,9 @@
+" Set default position for NERDTree window
+let g:NERDTreeWinPos = "right"
+
+" Remove help text at the top of NERDTree window
+let g:NERDTreeMinimalUI = 1
+
 " Hide empty line tilde character by setting their color to same as background
 :highlight EndOfBuffer ctermfg=black
 
