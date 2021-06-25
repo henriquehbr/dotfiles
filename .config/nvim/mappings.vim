@@ -46,3 +46,9 @@ nnoremap U <C-R>
 
 " search -> f
 nnoremap f /
+
+" toggle NERDTree -> b
+nnoremap <C-b> :NERDTreeToggle<CR>
+
+" focus on NERDTree -> e
+noremap <C-s-e> <C-w>p
