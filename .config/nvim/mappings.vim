@@ -43,3 +43,6 @@ nnoremap <S-Tab> :tabp<CR>
 
 " redo -> U
 nnoremap U <C-R>
+
+" search -> f
+nnoremap f /
