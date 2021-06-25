@@ -41,8 +41,14 @@ nnoremap <Tab> :tabn<CR>
 " previous tab -> shift + tab
 nnoremap <S-Tab> :tabp<CR>
 
-" redo -> U
-nnoremap U <C-R>
+" disable default undo
+nnoremap <C-r> <Nop>
+
+" undo -> z
+nnoremap z u
+
+" redo -> shift + z
+nnoremap <S-z> <C-R>
 
 " search -> f
 nnoremap f /
