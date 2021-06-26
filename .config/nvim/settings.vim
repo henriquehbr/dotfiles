@@ -7,6 +7,8 @@ let g:NERDTreeMinimalUI = 1
 " Hide empty line tilde character by setting their color to same as background
 :highlight EndOfBuffer ctermfg=black
 
+set updatetime=500
+
 " Enable line numbers
 set number relativenumber
 
