@@ -4,6 +4,8 @@ let g:NERDTreeWinPos = "right"
 " Remove help text at the top of NERDTree window
 let g:NERDTreeMinimalUI = 1
 
+let g:indentLine_char = '│'
+
 " Hide empty line tilde character by setting their color to same as background
 highlight EndOfBuffer ctermfg=black
 
