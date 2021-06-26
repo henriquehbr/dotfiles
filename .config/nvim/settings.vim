@@ -5,7 +5,9 @@ let g:NERDTreeWinPos = "right"
 let g:NERDTreeMinimalUI = 1
 
 " Hide empty line tilde character by setting their color to same as background
-:highlight EndOfBuffer ctermfg=black
+highlight EndOfBuffer ctermfg=black
+
+highlight ColorColumn ctermbg=7
 
 set updatetime=500
 
@@ -15,20 +17,29 @@ set number relativenumber
 " Enables syntax highlight
 syntax on
 
+" use custom .vimrc (if present) per-directory basis
+set exrc
+
 " Prevent text from wrapping
 set nowrap
 
-" Set tab characters to 4-spaces wide
+" spaces per tab keypress
 set tabstop=4
 
-" Set indent width to 4
+" spaces per indentation
 set shiftwidth=4
 
-" Set number of columns for an indent
+" spaces per tab on insert mode
 set softtabstop=4
 
-" Set character encoding displayed
-set encoding=utf-8
+" use appropriate number of spaces for tab
+set expandtab
+
+" auto indentation on newlines
+set smartindent
+
+" disable swap files (unsaved closed files)
+set noswapfile
 
 " Set the encoding written to file
 set fileencoding=utf-8
@@ -38,3 +49,5 @@ set cursorline
 
 " Centers the cursor horizontally when scrolling
 set scrolloff=999
+
+set colorcolumn=80
