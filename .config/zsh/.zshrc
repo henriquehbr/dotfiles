@@ -1,6 +1,6 @@
 # Import aliases & environment variables
-. $HOME/.zsh_aliases
-. $HOME/.zsh_vars
+. ~/.config/zsh/.zsh_aliases
+. ~/.config/zsh/.zsh_vars
 
 autoload -Uz compinit promptinit
 compinit

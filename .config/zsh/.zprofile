@@ -1,4 +1,5 @@
-[[ -f ~/.zshrc ]] && . ~/.zshrc
+# Source .zshrc if it exists
+[[ -f ~/.config/zsh/.zshrc ]] && . ~/.config/zsh/.zshrc
 
 PATH=$PATH:~/.local/bin
 PATH=$PATH:~/.local/bin/statusbar
