@@ -2,8 +2,8 @@
 # commands, will be read when starting as an interactive shell
 
 # Import aliases & environment variables
-. ~/.config/zsh/.zsh_aliases
-. ~/.config/zsh/.zsh_vars
+. ~/.config/zsh/.zaliases
+. ~/.config/zsh/.zvars
 
 autoload -Uz compinit promptinit
 compinit
