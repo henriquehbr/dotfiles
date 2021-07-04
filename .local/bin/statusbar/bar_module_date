@@ -1,6 +1,6 @@
 #!/bin/bash
 
 run() {
-	date=$(date '+%d/%m/%y')
+	date=$(date '+%a %d/%m/%y')
 	echo " $date"
 }
