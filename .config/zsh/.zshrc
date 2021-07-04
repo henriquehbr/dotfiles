@@ -5,8 +5,16 @@
 . ~/.config/zsh/.zaliases
 . ~/.config/zsh/.zvars
 
-autoload -Uz compinit promptinit
+autoload -Uz compinit promptinit vcs_info
 compinit
 promptinit
 
-prompt pure
+# Executed before each prompt
+precmd() {
+    vcs_info
+}
+
+# Enables parameter expansion on the prompt string
+setopt PROMPT_SUBST
+
+. ~/.config/zsh/.zprompt
