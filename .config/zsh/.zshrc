@@ -18,3 +18,6 @@ precmd() {
 setopt PROMPT_SUBST
 
 . ~/.config/zsh/.zprompt
+
+# zsh-syntax-highlighting must be sourced at the end of .zshrc
+. $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

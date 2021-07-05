@@ -1,3 +1,6 @@
 [submodule ".config/st"]
 	path = .config/st
 	url = https://github.com/henriquehbr/st
+[submodule "/home/henriquehbr/.config/zsh/plugins/zsh-syntax-highlighting"]
+	path = /home/henriquehbr/.config/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
