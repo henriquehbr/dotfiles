@@ -37,14 +37,8 @@ while read -r line ; do
 						[ $num_mon -lt 2 ] && shift && continue
 						wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc monitor -f ${name}:} ${name} %{A}%{B-}%{F-}"
 						;;
-					[fFoOuU]*)
+					[FoOuU]*)
 						case $item in
-							f*)
-								# free desktop
-								FG=$COLOR_FREE_FG
-								BG=$COLOR_FREE_BG
-								UL=$BG
-								;;
 							F*)
 								if [ "$on_focused_monitor" ] ; then
 									# focused free desktop
