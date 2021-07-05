@@ -6,15 +6,11 @@
 super + Return
 	st
 
-# program launcher
-super + @space
-	dmenu_run
-
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
-# Runs dmenu
+# program launcher
 super + d
 	dmenu_run -p "Run:" -fn "Source Code Pro" -nb "#333232" -nf "#a7a5a5" -sb "#009F6B"
 
