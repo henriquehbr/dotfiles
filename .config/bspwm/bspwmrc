@@ -1,5 +1,6 @@
-#! /bin/sh
+#!/bin/sh
 
+# Check if "sxhkd" and "bar" are running, if not, run them in background
 pgrep -x sxhkd > /dev/null || sxhkd &
 pgrep -x bar > /dev/null || bar &
 
