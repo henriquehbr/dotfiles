@@ -6,6 +6,9 @@
 . ~/.config/zsh/.zvars
 
 . $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+. $ZDOTDIR/plugins/zsh-autopair/autopair.zsh
+
+autopair-init
 
 autoload -Uz compinit promptinit vcs_info
 compinit

@@ -7,3 +7,6 @@
 [submodule ".config/zsh/plugins/zsh-autosuggestions"]
 	path = .config/zsh/plugins/zsh-autosuggestions
 	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule ".config/zsh/plugins/zsh-autopair"]
+	path = .config/zsh/plugins/zsh-autopair
+	url = https://github.com/hlissner/zsh-autopair
