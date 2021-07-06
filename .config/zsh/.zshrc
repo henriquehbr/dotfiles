@@ -2,8 +2,8 @@
 # commands, will be read when starting as an interactive shell
 
 # aliases & environment variables
-. ~/.config/zsh/.zaliases
-. ~/.config/zsh/.zvars
+. $ZDOTDIR/.zaliases
+. $ZDOTDIR/.zvars
 
 # plugins
 . $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
