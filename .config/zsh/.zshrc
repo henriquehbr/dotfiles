@@ -5,6 +5,8 @@
 . ~/.config/zsh/.zaliases
 . ~/.config/zsh/.zvars
 
+. $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 autoload -Uz compinit promptinit vcs_info
 compinit
 promptinit
