@@ -10,3 +10,6 @@
 [submodule ".config/zsh/plugins/zsh-autopair"]
 	path = .config/zsh/plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair
+[submodule ".local/share/nvim/site/pack/plugins/start/indentLine"]
+	path = .local/share/nvim/site/pack/plugins/start/indentLine
+	url = https://github.com/Yggdroot/indentLine
