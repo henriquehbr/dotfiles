@@ -47,5 +47,7 @@ set fileencoding=utf-8
 " Enable highlighting of the current line
 set cursorline
 
+highlight CursorLine cterm=none ctermbg=238
+
 " Centers the cursor horizontally when scrolling
 set scrolloff=999
