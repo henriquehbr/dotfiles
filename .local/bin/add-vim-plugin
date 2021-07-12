@@ -1,0 +1,12 @@
+#!/bin/dash
+
+[ -z "$1" ] && echo "Missing plugin repository" && exit 1
+
+vim_plugin_dir=$XDG_DATA_HOME/nvim/site/pack/plugins/start
+vim_plugin_name=$(echo "$1" | cut -d / -f 2)
+
+echo "==============================="
+echo " Installing '$1' neovim plugin "
+echo "==============================="
+
+(cd $vim_plugin_dir ; git --git-dir="$HOME/repos/dots" --work-tree="$HOME" submodule add "https://github.com/$1")
