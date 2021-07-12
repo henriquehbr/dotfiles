@@ -6,7 +6,7 @@
 
 username='%F{green}%n%f'
 current_dir='%B%F{blue}%1~%f%b'
-git_branch=' on %F{yellow} %b%f'
+git_branch=' on %F{yellow}git:%b%f'
 
 # Formats the "vcs_info_msg_0_" variable
 zstyle ':vcs_info:git:*' formats "$git_branch"
