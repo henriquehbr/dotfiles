@@ -9,8 +9,6 @@ let g:indentLine_char = '│'
 " Hide empty line tilde character by setting their color to same as background
 highlight EndOfBuffer ctermfg=black
 
-highlight ColorColumn ctermbg=7
-
 set updatetime=500
 
 " Enable line numbers
@@ -51,5 +49,3 @@ set cursorline
 
 " Centers the cursor horizontally when scrolling
 set scrolloff=999
-
-set colorcolumn=80
