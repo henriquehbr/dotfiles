@@ -6,10 +6,19 @@
 
 [ -z "$1" ] && echo "usage: add-vim-plugin <user/repo>" && exit 1
 
+bold=$(tput bold)
+normal=$(tput sgr0)
+green=$(tput setf 2)
+blue=$(tput setaf 4)
+nocolor=$(tput setf 9)
+
+write() {
+    message=$1
+    echo "${bold}${green}[add-vim-plugin]:${nocolor}${normal} $message"
+}
+
 vim_plugin_dir="$XDG_DATA_HOME/nvim-plugins"
 
-echo "==============================="
-echo " Installing '$1' neovim plugin "
-echo "==============================="
+write "Installing ${blue}'$1'${normal} plugin"
 
 (cd "$vim_plugin_dir" || exit ; git --git-dir="$HOME/repos/dots" --work-tree="$HOME" submodule add "https://github.com/$1")
