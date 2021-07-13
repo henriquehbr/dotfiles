@@ -39,13 +39,13 @@ function SetupPads()
 	if &splitright | set nosplitright | endif
 	vnew leftbuffer
 	exe "vertical resize" . width
-	setlocal nonumber norelativenumber nocursorline laststatus=0
+	setlocal nonumber norelativenumber nocursorline nobuflisted buftype=nofile laststatus=0
 	wincmd l
 	set splitright
 	vnew rightbuffer
 	wincmd l
 	exe "vertical resize" . width
-	setlocal nonumber norelativenumber nocursorline laststatus=0
+	setlocal nonumber norelativenumber nocursorline nobuflisted buftype=nofile laststatus=0
 	wincmd h
 endfunction
 
