@@ -19,3 +19,6 @@
 [submodule ".local/share/nvim-plugins/vim-buftabline"]
 	path = .local/share/nvim-plugins/vim-buftabline
 	url = https://github.com/ap/vim-buftabline
+[submodule ".local/share/nvim-plugins/nerdtree"]
+	path = .local/share/nvim-plugins/nerdtree
+	url = https://github.com/preservim/nerdtree
