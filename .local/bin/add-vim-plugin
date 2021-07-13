@@ -7,10 +7,10 @@
 # Exit if no plugins are specified
 [ -z "$1" ] && echo "usage: add-vim-plugin <user/repo>" && exit 1
 
-vim_plugin_dir="$XDG_DATA_HOME/nvim-plugins"
+plugin_dir="$XDG_DATA_HOME/nvim-plugins"
 
 # Exit if the specified plugin is already installed
-[ -d "$vim_plugin_dir/$1" ] && echo "The '$1' plugin is already installed, aborting..." && exit 1
+[ -d "$plugin_dir/$1" ] && echo "The '$1' plugin is already installed, aborting..." && exit 1
 
 bold=$(tput bold)
 normal=$(tput sgr0)
@@ -23,8 +23,8 @@ write() {
     echo "${bold}${green}[add-vim-plugin]:${nocolor}${normal} $message"
 }
 
-vim_plugin_dir="$XDG_DATA_HOME/nvim-plugins"
+plugin_dir="$XDG_DATA_HOME/nvim-plugins"
 
 write "Installing ${blue}'$1'${normal} plugin"
 
-(cd "$vim_plugin_dir" || exit ; git --git-dir="$HOME/repos/dots" --work-tree="$HOME" submodule add "https://github.com/$1")
+(cd "$plugin_dir" || exit ; git --git-dir="$HOME/repos/dots" --work-tree="$HOME" submodule add "https://github.com/$1")
