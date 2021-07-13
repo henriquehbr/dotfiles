@@ -1,6 +1,9 @@
 " automatically load plugins from `~/.local/share/nvim-plugins`
 set runtimepath+=$XDG_DATA_HOME/nvim-plugins/**
 
+" allows switching buffers even with unsaved changes
+set hidden
+
 " Set default position for NERDTree window
 let g:NERDTreeWinPos = "right"
 
