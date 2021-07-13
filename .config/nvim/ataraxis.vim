@@ -77,7 +77,7 @@ autocmd VimEnter * call SetupPads()
 autocmd VimResized * if GetBuffers() =~ "leftbuffer rightbuffer" || winnr() == 1 | call AdjustPads() | endif
 
 " Remove paddings when a new buffer is created
-autocmd BufNew * call RemovePads()
+autocmd BufNew * if winwidth('$') < 80 | call RemovePads() | endif
 
 " Re-add paddings when the previously created buffer is closed
 autocmd WinEnter * if winnr('$') == 1 | call SetupPads() | endif
