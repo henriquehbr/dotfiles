@@ -4,7 +4,13 @@
 # usage: add-vim-plugin <user/repo>
 # author: Henrique Borges (@henriquehbr) <henriqueborgeshbr@gmail.com>
 
+# Exit if no plugins are specified
 [ -z "$1" ] && echo "usage: add-vim-plugin <user/repo>" && exit 1
+
+vim_plugin_dir="$XDG_DATA_HOME/nvim-plugins"
+
+# Exit if the specified plugin is already installed
+[ -d "$vim_plugin_dir/$1" ] && echo "The '$1' plugin is already installed, aborting..." && exit 1
 
 bold=$(tput bold)
 normal=$(tput sgr0)
