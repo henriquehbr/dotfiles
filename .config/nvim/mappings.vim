@@ -36,10 +36,10 @@ nnoremap o :Explore<CR>
 nnoremap O :Tex<CR>
 
 " next tab -> tab
-nnoremap <Tab> :tabn<CR>
+nnoremap <Tab> :bnext<CR>
 
 " previous tab -> shift + tab
-nnoremap <S-Tab> :tabp<CR>
+nnoremap <S-Tab> :bprev<CR>
 
 " disable default undo
 nnoremap <C-r> <Nop>
