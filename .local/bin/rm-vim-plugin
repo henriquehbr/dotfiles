@@ -20,12 +20,12 @@ blue=$(tput setaf 4)
 red=$(tput setaf 1)
 nocolor=$(tput setf 9)
 
+plugin_path=$(echo "$plugin_dir/$plugin_name" | cut -d / -f 4-)
+
 write() {
     message=$1
     echo "${bold}${red}[rm-vim-plugin]:${nocolor}${normal} $message"
 }
-
-plugin_path=$(echo "$plugin_dir/$plugin_name" | cut -d / -f 4-)
 
 rm_git_submodule_entry() {
     config_file=$1
