@@ -50,6 +50,7 @@ function SetupPads()
 endfunction
 
 function RemovePads()
+    if GetBuffers() !~ "leftbuffer rightbuffer" | return | endif
 	" buffer wipeout => completely removes any trace of the buffer
 	bw! leftbuffer rightbuffer
 endfunction
