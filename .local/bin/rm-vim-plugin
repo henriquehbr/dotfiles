@@ -3,8 +3,8 @@
 [ -z "$1" ] && echo "Missing plugin name" && exit 1
 
 plugin_name=$1
-plugin_dir="$XDG_DATA_HOME/nvim/site/pack/plugins/start"
-plugin_path="$(echo $plugin_dir/$1 | cut -d / -f 4-)"
+plugin_dir="$XDG_DATA_HOME/nvim-plugins"
+plugin_path=$(echo "$plugin_dir/$1" | cut -d / -f 4-)
 
 rm_git_submodule_entry() {
     config_file=$1

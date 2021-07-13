@@ -10,12 +10,12 @@
 [submodule ".config/zsh/plugins/zsh-autopair"]
 	path = .config/zsh/plugins/zsh-autopair
 	url = https://github.com/hlissner/zsh-autopair
-[submodule ".local/share/nvim/site/pack/plugins/start/indentLine"]
-	path = .local/share/nvim/site/pack/plugins/start/indentLine
-	url = https://github.com/Yggdroot/indentLine
-[submodule ".local/share/nvim/site/pack/plugins/start/auto-pairs"]
-	path = .local/share/nvim/site/pack/plugins/start/auto-pairs
+[submodule ".local/share/nvim-plugins/auto-pairs"]
+	path = .local/share/nvim-plugins/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
-[submodule ".local/share/nvim/site/pack/plugins/start/vim-buftabline"]
-	path = .local/share/nvim/site/pack/plugins/start/vim-buftabline
+[submodule ".local/share/nvim-plugins/indentLine"]
+	path = .local/share/nvim-plugins/indentLine
+	url = https://github.com/Yggdroot/indentLine
+[submodule ".local/share/nvim-plugins/vim-buftabline"]
+	path = .local/share/nvim-plugins/vim-buftabline
 	url = https://github.com/ap/vim-buftabline

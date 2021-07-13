@@ -1,3 +1,6 @@
+" automatically load plugins from `~/.local/share/nvim-plugins`
+set runtimepath+=$XDG_DATA_HOME/nvim-plugins/**
+
 " Set default position for NERDTree window
 let g:NERDTreeWinPos = "right"
 
