@@ -18,12 +18,12 @@ green=$(tput setf 2)
 blue=$(tput setaf 4)
 nocolor=$(tput setf 9)
 
+plugin_dir="$XDG_DATA_HOME/nvim-plugins"
+
 write() {
     message=$1
     echo "${bold}${green}[add-vim-plugin]:${nocolor}${normal} $message"
 }
-
-plugin_dir="$XDG_DATA_HOME/nvim-plugins"
 
 write "Installing ${blue}'$1'${normal} plugin"
 
