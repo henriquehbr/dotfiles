@@ -4,8 +4,6 @@
 " License: this file is placed in the public domain
 
 " Change buffer split character to blank space
-set fillchars+=vert:\ 
-
 " Set buffer split character to transparent
 highlight VertSplit cterm=NONE
 
