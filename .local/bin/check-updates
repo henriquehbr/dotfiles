@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# description: check for updates with pacman
+# usage: check-updates
+# author: Henrique Borges (@henriquehbr) <henriqueborgeshbr@gmail.com>
+
 check_updates_db="/tmp/updates-db-${UID}/"
 
 # Delete database lockfile on exit

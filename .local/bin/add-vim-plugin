@@ -1,6 +1,10 @@
 #!/bin/dash
 
-[ -z "$1" ] && echo "Missing plugin repository" && exit 1
+# description: install neovim plugins
+# usage: add-vim-plugin <user/repo>
+# author: Henrique Borges (@henriquehbr) <henriqueborgeshbr@gmail.com>
+
+[ -z "$1" ] && echo "usage: add-vim-plugin <user/repo>" && exit 1
 
 vim_plugin_dir="$XDG_DATA_HOME/nvim-plugins"
 

@@ -1,5 +1,9 @@
 #!/bin/dash
 
+# description: remove neovim plugins
+# usage: rm-vim-plugin <plugin_name>
+# author: Henrique Borges (@henriquehbr) <henriqueborgeshbr@gmail.com>
+
 [ -z "$1" ] && echo "Missing plugin name" && exit 1
 
 plugin_name=$1
@@ -15,7 +19,6 @@ rm_git_submodule_entry() {
 echo "======================================="
 echo " Removing neovim '$plugin_name' plugin "
 echo "======================================="
-
 
 # Remove .git/config entries
 rm_git_submodule_entry ~/repos/dots/config "$plugin_path"
