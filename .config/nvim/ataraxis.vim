@@ -76,11 +76,14 @@ autocmd VimEnter * call SetupPads()
 " Adjust paddings width on resize
 autocmd VimResized * if GetBuffers() =~ "leftbuffer rightbuffer" || winnr() == 1 | call AdjustPads() | endif
 
-" Remove paddings when a new buffer is created
-autocmd BufNew * if winwidth('$') < 80 | call RemovePads() | endif
+" Remove pads if newly-created buffer is too thin
+autocmd BufNew,WinNew * if winwidth('$') < 80 | call RemovePads() | endif
+
+" Remove pads if viewport is too thin when opening nerdtree
+autocmd BufEnter * if (&columns - 34 < 80 && @% == "NERD_tree_1") | call RemovePads() | endif
 
 " Re-add paddings when the previously created buffer is closed
 autocmd WinEnter * if winnr('$') == 1 | call SetupPads() | endif
 
-" Prevent switching to paddings buffers, and quit if only the paddings are left
-autocmd BufEnter * if winnr('$') == 2 && (@% == "leftbuffer" || @% == "rightbuffer") | qa | elseif @% == "leftbuffer" | wincmd l | elseif @% == "rightbuffer" | wincmd h | endif
+" Quit when only the two pads are left
+autocmd BufEnter * if winnr('$') == 2 && (@% == "leftbuffer" || @% == "rightbuffer") | qa | endif
