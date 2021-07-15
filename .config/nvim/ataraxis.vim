@@ -4,6 +4,8 @@
 " License: this file is placed in the public domain
 
 let g:editor_width = 80
+let g:min_pad_width = 4
+let s:nerdtree_width = 34
 
 " Change buffer split character to blank space
 " Set buffer split character to transparent
@@ -81,7 +83,7 @@ autocmd VimResized * if GetBuffers() =~ "leftbuffer rightbuffer" || winnr() == 1
 autocmd BufNew,WinNew * if winwidth('$') < g:editor_width && @% != "NERD_tree_1" | call RemovePads() | endif
 
 " Remove pads if viewport is too thin when opening nerdtree
-autocmd BufEnter * if &columns - 34 < g:editor_width && @% == "NERD_tree_1" | call RemovePads() | endif
+autocmd BufEnter * if &columns - (s:nerdtree_width + g:min_pad_width) < g:editor_width && @% == "NERD_tree_1" | call RemovePads() | endif
 
 " Re-add paddings when the previously created buffer is closed
 autocmd WinEnter * if winnr('$') == 1 | call SetupPads() | endif
