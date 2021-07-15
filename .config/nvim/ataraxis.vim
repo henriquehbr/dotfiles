@@ -3,6 +3,8 @@
 " Maintainer: Henrique Borges (@henriquehbr) <henriqueborgeshbr@gmail.com>
 " License: this file is placed in the public domain
 
+let g:editor_width = 80
+
 " Change buffer split character to blank space
 " Set buffer split character to transparent
 highlight VertSplit cterm=NONE
@@ -19,8 +21,7 @@ function! WinByBufname(bufname)
 endfunction
 
 function GetPadWidth()
-	let editor_width = 80
-	let padding_width = (&columns - (editor_width + 4)) / 2
+	let padding_width = (&columns - (g:editor_width + 4)) / 2
 	return padding_width
 endfunction
 
@@ -34,7 +35,7 @@ function GetBuffers()
 endfunction
 
 function SetupPads()
-	if &columns < 80 | return | endif
+	if &columns < g:editor_width | return | endif
 	let width = GetPadWidth()
 	if &splitright | set nosplitright | endif
 	vnew leftbuffer
@@ -56,7 +57,7 @@ function RemovePads()
 endfunction
 
 function AdjustPads()
-	if &columns < 80
+	if &columns < g:editor_width
 		call RemovePads()
 	else
 		let buffers = GetBuffers()
@@ -77,10 +78,10 @@ autocmd VimEnter * call SetupPads()
 autocmd VimResized * if GetBuffers() =~ "leftbuffer rightbuffer" || winnr() == 1 | call AdjustPads() | endif
 
 " Remove pads if newly-created buffer is too thin
-autocmd BufNew,WinNew * if winwidth('$') < 80 | call RemovePads() | endif
+autocmd BufNew,WinNew * if winwidth('$') < g:editor_width && @% != "NERD_tree_1" | call RemovePads() | endif
 
 " Remove pads if viewport is too thin when opening nerdtree
-autocmd BufEnter * if (&columns - 34 < 80 && @% == "NERD_tree_1") | call RemovePads() | endif
+autocmd BufEnter * if &columns - 34 < g:editor_width && @% == "NERD_tree_1" | call RemovePads() | endif
 
 " Re-add paddings when the previously created buffer is closed
 autocmd WinEnter * if winnr('$') == 1 | call SetupPads() | endif
