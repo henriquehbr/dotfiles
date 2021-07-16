@@ -1,5 +1,4 @@
 " Vim global plugin for a more pleasing reading experience
-" Last Change: 11/07/21
 " Maintainer: Henrique Borges (@henriquehbr) <henriqueborgeshbr@gmail.com>
 " License: this file is placed in the public domain
 
