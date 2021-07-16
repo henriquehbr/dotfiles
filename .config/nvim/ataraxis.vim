@@ -79,8 +79,8 @@ autocmd VimEnter * call SetupPads()
 " Adjust paddings width on resize
 autocmd VimResized * if GetBuffers() =~ "leftbuffer rightbuffer" || winnr() == 1 | call AdjustPads() | endif
 
-" Remove pads if newly-created buffer is too thin
-autocmd BufNew,WinNew * if winwidth('$') < g:editor_width && @% != "NERD_tree_1" | call RemovePads() | endif
+" Remove pads when a new split is created
+autocmd WinEnter * if winwidth('$') < g:editor_width | call RemovePads() | endif
 
 " Remove pads if viewport is too thin when opening nerdtree
 autocmd BufEnter * if &columns - (s:nerdtree_width + g:min_pad_width * 2) < g:editor_width && @% == "NERD_tree_1" | call RemovePads() | endif
